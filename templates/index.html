@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT - Estilo WhatsApp</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="chat-container" role="chat" aria-label="Container de chat">
+        <div id="name-container" aria-live="polite">
+            <input type="text" id="user-name" placeholder="Digite seu nome..." autofocus aria-label="Nome do usuário">
+            <button onclick="setUserName()" aria-label="Definir nome">Iniciar Chat</button>
+        </div>
+        <div id="chat-box" aria-live="polite" aria-relevant="additions" style="display: none;">
+            <!-- Mensagens vão aparecer aqui -->
+        </div>
+        <div id="input-container" style="display: none;">
+            <input type="text" id="message" placeholder="Digite sua mensagem..." aria-label="Mensagem">
+            <button onclick="sendMessage()" aria-label="Enviar mensagem">Enviar</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>
